@@ -3,23 +3,21 @@ require u-boot-ti.inc
 # u-boot needs devtree compiler to parse dts files
 DEPENDS += "dtc-native"
 
-DESCRIPTION = "u-boot bootloader for TI devices"
+DESCRIPTION = "u-boot bootloader for Tailyn ST7B2"
 
-LIC_FILES_CHKSUM = "file://Licenses/README;md5=0507cd7da8e7ad6d6701926ec9b84c95"
+LIC_FILES_CHKSUM = "file://Licenses/README;md5=c7383a594871c03da76b3707929d2919"
 
 PR = "r25"
 PV_append = "+git${SRCPV}"
 
-SRC_URI = "git://git.ti.com/ti-u-boot/ti-u-boot.git;protocol=git;branch=${BRANCH}"
+SRC_URI = "git://github.com/mayqueenEMBEDDED/mq-uboot.git;protocol=git;branch=${BRANCH}"
 
-BRANCH ?= "ti-u-boot-2015.07"
+BRANCH ?= "tailyn_imx_4.1.15_1.2.0_ga"
 
-SRCREV = "46c915c96358c426bb1f4dd1e25a9a805d93a24e"
+SRCREV = "3776a149a6484340a9284326b772d01aaed24da3"
 
 # Support for secure devices - detailed info is in doc/README.ti-secure
 TI_SECURE_DEV_PKG ?= ""
-TI_SECURE_DEV_PKG_dra7xx-hs-evm = "${TI_SECURE_DEV_PKG_DRA7}"
-TI_SECURE_DEV_PKG_am437x-hs-evm = "${TI_SECURE_DEV_PKG_AM4}"
 export TI_SECURE_DEV_PKG
 
 SPL_BINARY = "MLO"

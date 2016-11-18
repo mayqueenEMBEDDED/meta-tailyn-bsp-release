@@ -27,7 +27,7 @@ PREFERRED_PROVIDER_u-boot = "u-boot-ti-staging"
 KERNEL_IMAGETYPE = "zImage"
 
 UBOOT_ARCH = "arm"
-UBOOT_MACHINE = "am335x_evm_config"
+UBOOT_MACHINE = "am335x_st7b2_defconfig"
 
 UBOOT_ENTRYPOINT = "0x80008000"
 UBOOT_LOADADDRESS = "0x80008000"
